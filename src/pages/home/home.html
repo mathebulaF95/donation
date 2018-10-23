@@ -1,14 +1,73 @@
+
+
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     Donation Application
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+  <div *ngIf="registering" id="ruu">
+
+    <h1>Welcome To Church Donation App</h1>
+
+    
+
+    <button ion-button (click)= "register()">Register</button>
+    
+  </div>
+
+  <div *ngIf="log" id="ggg">
+    <button ion-button (click)= "login()">Login</button>
+  </div>
+
+  <div *ngIf="info" id="info">
+      
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type = "text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+     <ion-input type = "text" [(ngModel)]="surname"></ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-label floating>Email</ion-label>
+    <ion-input type = "text" [(ngModel)]="email"></ion-input>
+   </ion-item>
+   <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type = "text" [(ngModel)]="username"></ion-input>
+   </ion-item>
+   <ion-item>
+   <ion-label floating>Password</ion-label>
+   <ion-input type = "text" [(ngModel)]="password"></ion-input>
+   </ion-item>
+   <ion-item>
+   <ion-label floating>Confirm password</ion-label>
+   <ion-input type = "password" [(ngModel)]="confirmPassword"></ion-input>
+ </ion-item>
+
+  <div class="sss">
+      <button ion-button (click)= "submit()">Submit</button>
+ </div>
+  </div>
+
+  <div *ngIf="logInfo" id="lll">
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type = "text" [(ngModel)]="username"></ion-input>
+     </ion-item>
+     <ion-item>
+     <ion-label floating>Password</ion-label>
+     <ion-input type = "text" [(ngModel)]="password"></ion-input>
+     </ion-item>
+   
+  </div>
+
 </ion-content>
